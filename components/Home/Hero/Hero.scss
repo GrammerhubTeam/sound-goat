@@ -1,0 +1,158 @@
+// .bg-hero {
+//    background: url("../../images/hero/slide-1.jpg");
+//    background-repeat: no-repeat;
+//    background-size: cover;
+//    background-position: center;
+// }
+
+.h100 {
+   height: 100vh;
+}
+
+.bgOverlay {
+   background: -webkit-linear-gradient(left, #4311a1 50%, #18379e 100%);
+   background: linear-gradient(to left, #4311a1 50%, #18379e 100%);
+   opacity: 0.95;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   top: 0;
+}
+
+.displayTable {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+
+.displayTableCell {
+   display: table-cell;
+   vertical-align: middle;
+}
+
+.clubtitle {
+   font-size: 16px;
+   text-transform: uppercase;
+   letter-spacing: 7px;
+}
+
+.clubSlogan {
+   font-size: 46px;
+   line-height: 64px;
+}
+
+.ptb30 {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+.clubDesc {
+   color: rgba(255, 255, 255, 0.7);
+   font-size: 15px;
+   max-width: 600px;
+   position: relative;
+   animation: fromLeft 2s;
+}
+
+.heroContainer {
+   display: flex;
+   justify-content: center;
+}
+
+.heroBtn {
+   background-color: transparent;
+   border: 1px solid #333;
+   padding: 10px 30px;
+   font-weight: 600;
+   overflow: hidden;
+   position: absolute;
+   color: #665391 !important;
+   transition: width 0.8s ease 0s;
+   z-index: 1;
+   border-radius: 40px;
+   animation: fadeIn 2s;
+}
+
+.heroBtn:before,
+.heroBtn:after {
+   position: absolute;
+   content: '';
+   left: 0;
+   top: 0;
+   bottom: 0;
+   background-color: #f1f1f1;
+   z-index: -1;
+   transition: width 0.3s ease-in-out;
+   width: 50%;
+}
+.heroBtn:before {
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+}
+.heroBtn:after {
+   border-top-right-radius: 20px;
+   border-bottom-right-radius: 20px;
+}
+
+.heroBtn::after {
+   right: 0;
+   left: auto;
+}
+
+.heroBtn:hover:before,
+.heroBtn:hover:after {
+   width: 0;
+}
+
+.heroBtn:hover {
+   background-color: #171c6200;
+   border-color: white;
+   color: #fff !important;
+}
+
+.heroMain {
+   position: relative;
+   animation: fromRight 2s;
+}
+
+.heroBtn:active {
+   // transform: translateY(1px);
+   margin-top: 1px;
+}
+
+@keyframes fromLeft {
+   0% {
+       left: -100%;
+       opacity: 0;
+   }
+   40% {
+       opacity: 0;
+   }
+   100% {
+       left: 0;
+       opacity: 1;
+   }
+}
+
+@keyframes fromRight {
+   0% {
+       right: -100%;
+       opacity: 0;
+   }
+   30% {
+       opacity: 0;
+   }
+   100% {
+       right: 0;
+       opacity: 1;
+   }
+}
+
+@keyframes fadeIn {
+   0% {opacity: 0;}
+   60% {opacity: 0;}
+   100% {opacity: 1;}
+}
