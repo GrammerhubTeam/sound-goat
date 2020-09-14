@@ -3,6 +3,7 @@ const next = require('next')
 const bodyParser = require('body-parser')
 import axios from 'axios'
 import api from './api'
+require('dotenv').config()
 
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -45,7 +46,7 @@ app.prepare()
   // This starts the server
   server.listen(process.env.PORT || 3002, (err) => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:${process.env.PORT || 3000}`)
+    console.log(`> Ready on http://localhost:${process.env.PORT || 3002}`)
   })
 })
 .catch((ex:any) => {
