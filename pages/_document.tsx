@@ -42,6 +42,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
           />
+          <script src="https://apis.google.com/js/api.js"></script>
         </Head>
         <body>
           <Main />

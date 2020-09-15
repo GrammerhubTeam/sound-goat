@@ -3,7 +3,7 @@ const next = require('next')
 const bodyParser = require('body-parser')
 import axios from 'axios'
 import api from './api'
-
+const PORT = process.env.PORT || 3002;
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -43,9 +43,9 @@ app.prepare()
   })
 
   // This starts the server
-  server.listen(process.env.PORT || 3002, (err) => {
+  server.listen(PORT, (err) => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:${process.env.PORT || 3000}`)
+    console.log(`> Ready on http://localhost:${PORT}`)
   })
 })
 .catch((ex:any) => {

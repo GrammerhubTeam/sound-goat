@@ -3,6 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 
 export default class MyApp extends App {
+
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
 
@@ -25,7 +26,8 @@ export default class MyApp extends App {
             <link href="../static/MyCalendar.css" rel="stylesheet"></link>
             <link href="../static/css/style.css" rel="stylesheet"></link>
         </Head>
-        <Component {...pageProps} />
+        <Component 
+        {...pageProps} />
       </>
     )
   }
