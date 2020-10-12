@@ -39,7 +39,7 @@ app.prepare()
     app.render(req, res, actualPage, queryParams)
   })
 
-  server.get('/login', (req, res) => {
+  server.get('/soundcloud-login', (req, res) => {
     const state = 'biYe74ns9auR75KL'
     res.cookie(stateKey, state)
 
@@ -52,7 +52,7 @@ app.prepare()
     })}`)
   })
 
-  server.get('callback', (req, res) => {
+  server.get('/callback', (req, res) => {
     const code = req.query.code || null
     const state = req.query.state || null
     const storedState = req.cookies ? req.cookies[stateKey] : null
