@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Container, Col, Jumbotron } from "react-bootstrap";
-import css from "./AboutUs.scss";
+import css from "./AboutUs.module.scss";
 
 export default () => (
   <React.Fragment>
@@ -17,7 +17,11 @@ export default () => (
             <div className={`${css.wrappers}mx-auto text-center`}>
               <h3 className={`${css.title}`}>About Us</h3>
               <p className={`${css.aboutsection}`}>
-                We are Grammers. Founded in 2019 our goal is give new developers a team environment to sharpen their skills in a collaborative environment while working on real-world team projects. Our mission is for all our members to be confident in any future interview or jobs. 
+                We are Grammers. Founded in 2019 our goal is give new developers
+                a team environment to sharpen their skills in a collaborative
+                environment while working on real-world team projects. Our
+                mission is for all our members to be confident in any future
+                interview or jobs.
               </p>
             </div>
           </Col>

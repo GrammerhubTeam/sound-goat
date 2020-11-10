@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
-import css from "./Footer.scss";
+import css from "./Footer.module.scss";
 
 const Footer = () => {
   return (
@@ -9,10 +9,12 @@ const Footer = () => {
         <Row>
           <Col sm="5">
             <div className={css.footerLogo}>
-              <img style={{ width: '50px' }} src="../static/grammerhubLogo.png" alt="Footer logo" />
-              <p>
-                Do you remember what you did last summer? Because I do :) 
-              </p>
+              <img
+                style={{ width: "50px" }}
+                src="../static/grammerhubLogo.png"
+                alt="Footer logo"
+              />
+              <p>Do you remember what you did last summer? Because I do :)</p>
             </div>
           </Col>
           <Col sm={{ span: 4, offset: 3 }}>

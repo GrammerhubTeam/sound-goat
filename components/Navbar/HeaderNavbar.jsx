@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import Header from "../Header/Header";
-import css from "./HeaderNavbar.scss";
+import css from "./HeaderNavbar.module.scss";
 
 class HeaderNavbar extends React.Component {
   state = {
@@ -32,8 +32,12 @@ class HeaderNavbar extends React.Component {
         <div id="navbar" className={css.HeaderNavbar}>
           <nav className="navbar navbar-expand-md navbar-light">
             <div className="container">
-              <Link href="/home" >
-                <img src="../static/grammerhub_banner.png" alt="GrammerHub" className={css.ghImg} />
+              <Link href="/home">
+                <img
+                  src="../static/grammerhub_banner.png"
+                  alt="GrammerHub"
+                  className={css.ghImg}
+                />
               </Link>
 
               <button

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import { Container, Row, Col, Button } from "react-bootstrap";
-import css from "./Hero.scss";
+import css from "./Hero.module.scss";
 
 class Hero extends React.Component {
   render() {

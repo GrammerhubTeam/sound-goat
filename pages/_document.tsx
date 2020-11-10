@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from "next/document";
 
-import "../static/css/normalize.css";
+// import "../static/css/normalize.css";
 // import "../static/css/style.css";
 
 class MyDocument extends Document {
@@ -9,10 +9,10 @@ class MyDocument extends Document {
     Note: for more information, visit the documentation below: 
     https://nextjs.org/docs/advanced-features/custom-document*/
 
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
+  // static async getInitialProps(ctx) {
+  //   const initialProps = await Document.getInitialProps(ctx);
+  //   return { ...initialProps };
+  // }
 
   render() {
     return (
