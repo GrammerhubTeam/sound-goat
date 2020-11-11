@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { Container, Row, Col } from "react-bootstrap";
-import css from "./Footer.module.scss";
+import Link from 'next/link'
+import { Container, Row, Col } from 'react-bootstrap'
+import css from './Footer.module.scss'
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <Col sm="5">
             <div className={css.footerLogo}>
               <img
-                style={{ width: "50px" }}
+                style={{ width: '50px' }}
                 src="../static/grammerhubLogo.png"
                 alt="Footer logo"
               />
@@ -36,7 +36,7 @@ const Footer = () => {
         </Row>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

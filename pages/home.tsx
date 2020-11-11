@@ -1,44 +1,40 @@
-import React from "react";
-import Layout from "../components/MyLayout";
+import React from 'react'
+import Layout from '../components/MyLayout'
 // import Hero from "../components/Home/Hero/Hero";
-import {
-  Animal,
-  Dog,
-  /*Cow,*/ Goat,
-} from "../components/utils/musicTaskRunner";
+import { Animal, Dog, /*Cow,*/ Goat } from '../components/utils/musicTaskRunner'
 
 const Home = () => {
   React.useEffect(() => {
-    const defaultAnimal = new Animal();
+    const defaultAnimal = new Animal()
     const dog = new Dog({
-      name: "Spot",
+      name: 'Spot',
       age: 5,
-    });
+    })
     const goat = new Goat({
-      name: "Grammer",
+      name: 'Grammer',
       age: 30,
-    });
+    })
     const anotherGoat = new Goat({
-      name: "Another Grammer",
+      name: 'Another Grammer',
       age: 31,
       announceYourself: () => {
-        console.log("Nah I'm different");
+        console.log("Nah I'm different")
       },
-      writeCode: () => console.log("we are now writing code..."),
-    });
+      writeCode: () => console.log('we are now writing code...'),
+    })
 
-    defaultAnimal.announceYourself();
-    dog.announceYourself();
-    goat.announceYourself();
-    anotherGoat.announceYourself();
+    defaultAnimal.announceYourself()
+    dog.announceYourself()
+    goat.announceYourself()
+    anotherGoat.announceYourself()
 
-    console.log("=======================================");
+    console.log('=======================================')
 
-    goat.writeCode();
-    anotherGoat.writeCode();
+    goat.writeCode()
+    anotherGoat.writeCode()
 
     // =========================================
-  }, []);
+  }, [])
 
   return (
     <Layout>
@@ -52,7 +48,7 @@ const Home = () => {
         <input type="submit" value="Upload file..." />
       </form>
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
