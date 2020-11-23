@@ -1,14 +1,9 @@
-import * as express from 'express'
 
-const router = express.Router();
+import * as express from "express";
+import spotifyApi from './services/spotify-api'
 
-router.get('/hello', function(req:any, res:any) {
-  res.send('hello') 
-});
+const router = express.Router()
 
-
-router.post('/contactus', function(req:any, res:any) {
-  res.send('contact') 
-});
+router.use("/spotify", spotifyApi);
 
 export default router

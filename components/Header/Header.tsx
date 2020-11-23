@@ -1,19 +1,19 @@
-import Link from "next/link";
-import Router from "next/router";
+import Link from 'next/link'
+import Router from 'next/router'
 
 const linkStyle = {
   marginRight: 15,
-};
+}
 
 const Header = () => {
   // ===============================================
   // LIFECYCLE METHODS FOR WHEN NEXT ROUTER CHANGES
-  Router.events.on("routeChangeStart", () => {
-    console.log("CHANGE STARTING");
-  });
-  Router.events.on("routeChangeComplete", () => {
-    console.log("CHANGE COMPLETED");
-  });
+  Router.events.on('routeChangeStart', () => {
+    console.log('CHANGE STARTING')
+  })
+  Router.events.on('routeChangeComplete', () => {
+    console.log('CHANGE COMPLETED')
+  })
   // ===============================================
   return (
     <ul className="navbar-nav ml-auto">
@@ -32,7 +32,7 @@ const Header = () => {
         </Link>
       </li>
     </ul>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

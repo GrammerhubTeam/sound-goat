@@ -22,8 +22,7 @@ export default class MyApp extends App {
             <title>Grammerhub | Level Up Your Coding Skills - Coming Soon</title>
 	          <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"></link>
             <link href="../static/css/normalize.css" rel="stylesheet"></link>
-            <link href="../static/MyCalendar.css" rel="stylesheet"></link>
-            <link href="../static/css/style.css" rel="stylesheet"></link>
+            {/* <link href="../static/css/style.css" rel="stylesheet"></link> */}
         </Head>
         <Component {...pageProps} />
       </>

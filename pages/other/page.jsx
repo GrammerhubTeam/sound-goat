@@ -12,11 +12,11 @@ const Index = (props) => (
       <title>Grammerhub | WE REALLY DO THIS BOILERPLATE THING</title>
     </Head>
 
-    <div className="gradient-bg" style={{minHeight: '100vh'}}>
+    <div className="gradient-bg" style={{ minHeight: '100vh' }}>
       <div className="wrapper">
         <main>
           <div id="coming-soon">
-              <h1>THIS IS THAT OTHER PAGE</h1>
+            <h1>THIS IS THAT OTHER PAGE</h1>
           </div>
         </main>
       </div>

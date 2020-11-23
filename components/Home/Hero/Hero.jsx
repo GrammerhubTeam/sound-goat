@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
 
-import { Container, Row, Col, Button } from "react-bootstrap";
-import css from "./Hero.scss";
+import { Container, Row, Col, Button } from 'react-bootstrap'
+import css from './Hero.module.scss'
 
 class Hero extends React.Component {
   render() {
@@ -28,8 +28,8 @@ class Hero extends React.Component {
           </div>
         </section>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Hero;
+export default Hero
