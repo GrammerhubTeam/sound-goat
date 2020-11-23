@@ -126,8 +126,10 @@ export class TaskRunner implements ITaskRunnerProps {
   };
   
   /** @description Find a song*/
-  findSong: VoidFunc = () => {
-    console.log("creating a playlist");
+  findSong = async <T>(/*user: string,*/ token: string, endpoint: string, queries: {[x: string]: any}) => {
+    const playlistsResponse = await axios.post<T>(endpoint, { token, ...queries })
+    const toBeReturned: T = playlistsResponse.data
+    return toBeReturned
   };
 
   /** @description Play a song*/
@@ -164,10 +166,10 @@ export class SpotifyTaskRunner extends TaskRunner {
   }
 
   // @override
-  getPlaylist = async (token: string, endpoint: string, id?: string) => {
-    const blah: ISpotifyGetPlaylist = await this.getPlaylist(token, endpoint, id)
-    return blah
-  }
+  // getPlaylist = async (token: string, endpoint: string, id?: string) => {
+  //   const blah: ISpotifyGetPlaylist = await this.getPlaylist(token, endpoint, id)
+  //   return blah
+  // }
 
 }
 // // Class: what props and methods object is gonna have
