@@ -1,5 +1,5 @@
-import React from "react";
-import axios from "axios";
+import React from 'react'
+import axios from 'axios'
 
 import css from "./welcome.module.scss";
 import { SpotifyTaskRunner } from "components/utils/musicTaskRunner";
@@ -21,7 +21,7 @@ import { IFindSongResponse, IItem } from "services/spotify-interfaces";
 // }
 
 const Welcome = () => {
-   const tok = 'BQC3mEgBMgMHpHEeFz3fKK-AdRLS5nEslxZpFLN2ipI8I9vPZ1ABgq3pmMx6LNNkDOVaGf_YEpQfToj_VoXb9RQUuG58T2FNzDZYYgeWsNcbgN7izqnFx9xp1OMOxuRxuF5P1tFiCZxiOoFj4ksxoIuEg0Y5XvYIkZnPX8H21D6HEag13BPxqg'
+   const tok = 'nice try'
    const spotifyRunner = new SpotifyTaskRunner({})
    const [searchValue, setSearchValue] = React.useState('')
    const [searchedImages, setSearchedImages] = React.useState<string[]>([])
@@ -32,8 +32,8 @@ const Welcome = () => {
          accessToken: tok,
       });
 
-      console.log(playlistFetch.data);
-   };
+    console.log(playlistFetch.data)
+  }
 
    // ALERT: Currently need to get access token from frontend ????
    // const randAsync = async () => {
@@ -57,18 +57,19 @@ const Welcome = () => {
       console.log('---------', findResponse, '---------')
    }
 
-   return (
-      <>
-         <div className={css.wrapper}>
-         <h2>App Name: BLAH</h2>
-         <h4>Playlist Name: BLAH Playlist</h4>
-         <p>SONG NAME 1</p>
-         <p>SONG NAME 2</p>
-         <p>SONG NAME 3</p>
-         <p>SONG NAME 4</p>
-         <p>SONG NAME 5</p>
+  return (
+    <>
+      <div className={css.wrapper}>
+        <h2>App Name: BLAH</h2>
+        <h4>Playlist Name: BLAH Playlist</h4>
+        <p>SONG NAME 1</p>
+        <p>SONG NAME 2</p>
+        <p>SONG NAME 3</p>
+        <p>SONG NAME 4</p>
+        <p>SONG NAME 5</p>
 
-         <button onClick={getAllLists}>CLICK TO GET PLAYLISTS</button>
+        <button onClick={getAllLists}>CLICK TO GET PLAYLISTS</button>
+
 
          <div style={{ width: '100%', height: '2px', backgroundColor: 'black', margin: '2rem 0' }}></div>
 
@@ -114,9 +115,9 @@ const Welcome = () => {
 
                   </div>   
                </div> */}
-         </div>
-      </>
-  );
-};
+      </div>
+    </>
+  )
+}
 
-export default Welcome;
+export default Welcome

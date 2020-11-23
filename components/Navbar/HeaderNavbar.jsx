@@ -1,31 +1,31 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
 
-import Header from "../Header/Header";
-import css from "./HeaderNavbar.module.scss";
+import Header from '../Header/Header'
+import css from './HeaderNavbar.module.scss'
 
 class HeaderNavbar extends React.Component {
   state = {
     collapsed: true,
     toggled: false,
-  };
+  }
 
   toggleNavbarHandler = () => {
     this.setState({
       collapsed: !this.state.collapsed,
-    });
-  };
+    })
+  }
 
   render() {
-    const { collapsed } = this.state;
+    const { collapsed } = this.state
 
     const mobileNavbar = collapsed
-      ? "collapse navbar-collapse"
-      : "collapse navbar-collapse show";
+      ? 'collapse navbar-collapse'
+      : 'collapse navbar-collapse show'
 
     const showNavbar = collapsed
-      ? "navbar-toggler navbar-toggler-right collapsed"
-      : "navbar-toggler navbar-toggler-right";
+      ? 'navbar-toggler navbar-toggler-right collapsed'
+      : 'navbar-toggler navbar-toggler-right'
 
     return (
       <header id="header">
@@ -60,8 +60,8 @@ class HeaderNavbar extends React.Component {
           </nav>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default HeaderNavbar;
+export default HeaderNavbar

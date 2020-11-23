@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import React from 'react'
+import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 
-import css from "../assets/css/contact/page-title.scss";
-import Link from "next/link";
+import css from '../assets/css/contact/page-title.scss'
+import Link from 'next/link'
 
 class BreadCrumb extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class BreadCrumb extends React.Component {
         <div
           className={`${css.pageTitle}`}
           style={{
-            backgroundImage: "url('../pages/assets/images/bcg/title-page.jpg')"
+            backgroundImage: "url('../pages/assets/images/bcg/title-page.jpg')",
           }}
         >
           <Container>
@@ -26,8 +26,8 @@ class BreadCrumb extends React.Component {
           </Container>
         </div>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default BreadCrumb;
+export default BreadCrumb

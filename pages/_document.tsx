@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Main, NextScript } from 'next/document'
 
 // import "../static/css/normalize.css";
 // import "../static/css/style.css";
@@ -58,8 +58,8 @@ class MyDocument extends Document {
           ></script>
         </body>
       </html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument
