@@ -3,6 +3,7 @@ const next = require('next')
 const bodyParser = require('body-parser')
 import axios from 'axios'
 import api from './api'
+require('dotenv').config()
 
 require('dotenv').config()
 
