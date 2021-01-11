@@ -46,14 +46,14 @@ import axios from 'axios'
 // //  ======================================================================================================
 
 export interface ITaskRunnerProps {
-  [x: string]: any;
+  [x: string]: any
 }
 
 export enum TASK_RUNNER_NAME {
-  SPOTIFY = "SPOTIFY",
+  SPOTIFY = 'SPOTIFY',
 }
 
-export type VoidFunc = (something?: any) => void;
+export type VoidFunc = (something?: any) => void
 
 export interface ISpotifyGetPlaylist {
   poop: string
@@ -61,28 +61,28 @@ export interface ISpotifyGetPlaylist {
 
 export interface AuthMethods {
   /** @description Sign in method */
-  signIn: <T>(ep: string) => Promise<T>;
+  signIn: <T>(ep: string) => Promise<T>
   /** @description Sign out method */
-  signOut: <T>(ep: string) => Promise<T>;
+  signOut: <T>(ep: string) => Promise<T>
   /** @description Gets a refresh token */
-  refreshToken: <T>(ep: string) => Promise<T>;
+  refreshToken: <T>(ep: string) => Promise<T>
 }
 
 export class TaskRunner implements ITaskRunnerProps {
   // ----------------  STATE  --------------------
   // playlists: IPlaylist[] = []; // <================================== WE GOTTA DO THIS
   // playingState: PLAYING_STATES; // <================================== WE GOTTA DO THIS
-  shuffle: boolean = false;
-  styling: { [x: string]: string | number } = {};
+  shuffle: boolean = false
+  styling: { [x: string]: string | number } = {}
   // userInfo: IUserInfo; // <================================== WE GOTTA DO THIS
   // nextSong: ISong; // <================================== WE GOTTA DO THIS
   // currentSong: ISong; // <================================== WE GOTTA DO THIS
   // thirdParties, // links for when we share the songs?
-  graphicArtLink: string = ""; // This should be some default soundGoat image
+  graphicArtLink: string = '' // This should be some default soundGoat image
   // ---------------------------------------------
 
   // ---------------- METHODS --------------------
-  apiName: TASK_RUNNER_NAME = TASK_RUNNER_NAME.SPOTIFY;
+  apiName: TASK_RUNNER_NAME = TASK_RUNNER_NAME.SPOTIFY
   auth: AuthMethods = {
     signIn: async <T>(endpoint: string) => {
       const signInResponse = await axios.post<T>(endpoint)
@@ -99,32 +99,39 @@ export class TaskRunner implements ITaskRunnerProps {
       const toBeReturned: T = refreshResponse.data
       return toBeReturned
     },
-  };
+  }
   // ================================ /** @description Refresh auth token method */
   // ================================ refreshToken: () => void;
   /** @description Gets the play list*/
-  getPlaylist = async <T>(/*user: string,*/ token: string, endpoint: string, id?: string) => {
+  getPlaylist = async <T>(
+    /*user: string,*/ token: string,
+    endpoint: string,
+    id?: string
+  ) => {
     try {
-      const playlistsResponse = await axios.post<T>(endpoint, { accessToken: token, id })
+      const playlistsResponse = await axios.post<T>(endpoint, {
+        accessToken: token,
+        id,
+      })
       const toBeReturned: T = playlistsResponse.data
       return toBeReturned
     } catch (err) {
       const blah: any = 'hello'
       return blah
     }
-  };
+  }
   /** @description Gets a song*/
   getSong = async <T>(/*user: string,*/ token: string, endpoint: string) => {
     const playlistsResponse = await axios.post<T>(endpoint, { token })
     const toBeReturned: T = playlistsResponse.data
     return toBeReturned
-  };
-  
+  }
+
   /** @description Creates a playlist*/
   createPlaylist: VoidFunc = () => {
-    console.log("creating a playlist");
-  };
-  
+    console.log('creating a playlist')
+  }
+
   /** @description Find a song*/
   findSong = async <T>(/*user: string,*/ token: string, endpoint: string, queries: {[x: string]: any}) => {
     const playlistsResponse = await axios.post<T>(endpoint, { token, ...queries })
@@ -134,23 +141,23 @@ export class TaskRunner implements ITaskRunnerProps {
 
   /** @description Play a song*/
   playSong: VoidFunc = () => {
-    console.log("playing a song");
+    console.log('playing a song')
     // EXAMPLE OF EMBED BELOW
     // <iframe src="https://open.spotify.com/embed/track/4xcP3jYFNN4Y3QhdbijDkf" width="100%" height="100" frameBorder="0" allowTransparency={true} allow="encrypted-media" />
-  };
+  }
   /** @description Share a song*/
   shareSong: VoidFunc = () => {
-    console.log("sharing a song");
-  };
+    console.log('sharing a song')
+  }
   // ----------------------------------------------
 
   constructor(init: ITaskRunnerProps) {
-    this.apiName = init.apiName || this.apiName;
-    this.getSong = init.getSong || this.getSong;
-    this.getPlaylist = init.getPlaylist || this.getPlaylist;
-    this.createPlaylist = init.createPlaylist || this.createPlaylist;
-    this.playSong = init.playSong || this.playSong;
-    this.shareSong = init.shareSong || this.shareSong;
+    this.apiName = init.apiName || this.apiName
+    this.getSong = init.getSong || this.getSong
+    this.getPlaylist = init.getPlaylist || this.getPlaylist
+    this.createPlaylist = init.createPlaylist || this.createPlaylist
+    this.playSong = init.playSong || this.playSong
+    this.shareSong = init.shareSong || this.shareSong
   }
 }
 
@@ -204,21 +211,21 @@ export class TaskRunner implements ITaskRunnerProps {
 // // }
 
 export interface IAnimalProperties {
-  name: string;
-  age: number;
-  sound?: string;
-  announceYourself?: () => void;
+  name: string
+  age: number
+  sound?: string
+  announceYourself?: () => void
   // ----------------------------------------------
-  randomObj?: object;
-  stringedObject?: { [x: string]: string };
-  boolVal?: boolean; // same as "true | false"
-  numArr?: number[]; // Single array of numbers
+  randomObj?: object
+  stringedObject?: { [x: string]: string }
+  boolVal?: boolean // same as "true | false"
+  numArr?: number[] // Single array of numbers
   // numArrArr?: Array<number[]> // Also typed as Array<Array<number>>
-  numArrArr?: Array<Array<number>>; // Also typed as Array<number[]>
+  numArrArr?: Array<Array<number>> // Also typed as Array<number[]>
 }
 
 export interface IGoatProperties {
-  writeCode?: () => void;
+  writeCode?: () => void
 }
 
 // Interface can implement another interface

@@ -1,6 +1,6 @@
-import React from "react";
-import { Row, Container, Col, Jumbotron } from "react-bootstrap";
-import css from "./AboutUs.module.scss";
+import React from 'react'
+import { Row, Container, Col, Jumbotron } from 'react-bootstrap'
+import css from './AboutUs.module.scss'
 
 export default () => (
   <React.Fragment>
@@ -43,4 +43,4 @@ export default () => (
       </Jumbotron>
     </Container>
   </React.Fragment>
-);
+)

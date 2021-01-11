@@ -1,12 +1,12 @@
-import React from "react";
-import axios from "axios";
+import React from 'react'
+import axios from 'axios'
 
 import css from "./welcome.module.scss";
 import { IFindSongResponse, IItem } from "components/api/spotify/spotify-interfaces";
 import { SpotifyTaskRunner } from "components/api/spotify/taskRunner";
 
 const Welcome = () => {
-   const tok = 'BQC3mEgBMgMHpHEeFz3fKK-AdRLS5nEslxZpFLN2ipI8I9vPZ1ABgq3pmMx6LNNkDOVaGf_YEpQfToj_VoXb9RQUuG58T2FNzDZYYgeWsNcbgN7izqnFx9xp1OMOxuRxuF5P1tFiCZxiOoFj4ksxoIuEg0Y5XvYIkZnPX8H21D6HEag13BPxqg'
+   const tok = 'nice try'
    const spotifyRunner = new SpotifyTaskRunner({})
    const [searchValue, setSearchValue] = React.useState('')
    const [searchedImages, setSearchedImages] = React.useState<string[]>([])
@@ -17,8 +17,8 @@ const Welcome = () => {
          accessToken: tok,
       });
 
-      console.log(playlistFetch.data);
-   };
+    console.log(playlistFetch.data)
+  }
 
    const findSong = async () => {
       const findResponse: IFindSongResponse = await spotifyRunner.findSong(tok, '/api/spotify/find-song', { query: searchValue })
@@ -56,4 +56,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Welcome

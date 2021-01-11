@@ -13,7 +13,7 @@ const Home = () => {
         <input type="submit" value="Upload file..." />
       </form>
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
