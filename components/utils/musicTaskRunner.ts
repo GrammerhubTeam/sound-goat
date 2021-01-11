@@ -154,24 +154,7 @@ export class TaskRunner implements ITaskRunnerProps {
   }
 }
 
-export class SpotifyTaskRunner extends TaskRunner {
-  constructor(init: ITaskRunnerProps) {
-    super(init);
-    // this.apiName = init.apiName || this.apiName;
-    // this.getSong = init.getSong || this.getSong;
-    // this.getPlaylist = init.getPlaylist || this.getPlaylist;
-    // this.createPlaylist = init.createPlaylist || this.createPlaylist;
-    // this.playSong = init.playSong || this.playSong;
-    // this.shareSong = init.shareSong || this.shareSong;
-  }
 
-  // @override
-  // getPlaylist = async (token: string, endpoint: string, id?: string) => {
-  //   const blah: ISpotifyGetPlaylist = await this.getPlaylist(token, endpoint, id)
-  //   return blah
-  // }
-
-}
 // // Class: what props and methods object is gonna have
 
 // // Constructor: set values to class' props
@@ -184,26 +167,26 @@ export class SpotifyTaskRunner extends TaskRunner {
 // // Key: x (variable name) : String (data type)
 
 // interface IPhotoLinks {
-//     Adult_Photo_1: string,
-//     Adult_Photo_2: string,
-//     Adult_Photo_3: string,
-//     Adult_Photo_4: string,
-//     Adult_Photo_5: string,
-//     Adult_Photo_6: string,
-//     Adult_Photo_7: string,
+//     Older_People_Photo_1: string,
+//     Older_People_Photo_2: string,
+//     Older_People_Photo_3: string,
+//     Older_People_Photo_4: string,
+//     Older_People_Photo_5: string,
+//     Older_People_Photo_6: string,
+//     Older_People_Photo_7: string,
 //     Kid_Photo_1: string,
 //     [x: string]: string
 // }
 
 // // const photoLinks: {[x: string]: string} = {
 // const photoLinks: IPhotoLinks = {
-//     Adult_Photo_1: 'blahblahblahroute',
-//     Adult_Photo_2: 'blahblahblahroute',
-//     Adult_Photo_3: 'blahblahblahroute',
-//     Adult_Photo_4: 'blahblahblahroute',
-//     Adult_Photo_5: 'blahblahblahroute',
-//     Adult_Photo_6: 'blahblahblahroute',
-//     Adult_Photo_7: 'blahblahblahroute',
+//     Older_People_Photo_1: 'blahblahblahroute',
+//     Older_People_Photo_2: 'blahblahblahroute',
+//     Older_People_Photo_3: 'blahblahblahroute',
+//     Older_People_Photo_4: 'blahblahblahroute',
+//     Older_People_Photo_5: 'blahblahblahroute',
+//     Older_People_Photo_6: 'blahblahblahroute',
+//     Older_People_Photo_7: 'blahblahblahroute',
 //     Kid_Photo_1: 'yoyoyoyoyoyo',
 // }
 
@@ -211,12 +194,12 @@ export class SpotifyTaskRunner extends TaskRunner {
 // //     console.log(photoLinks[v])
 // // })
 
-// // Loop through each Adult_Photo
+// // Loop through each Older_People_Photo
 // // i will keep the number of photos
 
 // // for (let i = 0; i < 100; i++) {
-// //     if (photoLinks[`Adult_Photo_${i}`]) {
-// //         console.log(photoLinks[`Adult_Photo_${3}`])
+// //     if (photoLinks[`Older_People_Photo_${i}`]) {
+// //         console.log(photoLinks[`Older_People_Photo_${3}`])
 // //     }
 // // }
 
@@ -240,69 +223,3 @@ export interface IGoatProperties {
 
 // Interface can implement another interface
 // Interface can extends other classes or interfaces
-
-export class Animal implements IAnimalProperties {
-  // donald wuz here
-  name: string;
-  age: number;
-  sound: string;
-  announceYourself: () => void;
-
-  constructor(init?: IAnimalProperties) {
-    this.name = init?.name || "Tony";
-    this.age = init?.age || 70;
-    this.sound = init?.sound || "They're greeeeaaatttt!";
-    this.announceYourself =
-      init?.announceYourself ||
-      (() => {
-        console.log(
-          `${this.sound}! My name is ${this.name} and I'm ${this.age}`
-        );
-      });
-  }
-}
-
-export class Dog extends Animal {
-  // name: string
-  // age: number
-  // sound: string
-
-  constructor(init?: IAnimalProperties) {
-    super(init);
-    // =====  AKA  =====
-    // this.name = init?.name || 'Tony'
-    // this.age = init?.age || 70
-    // this.sound = init?.sound || "They're greeeeaaatttt!"
-    // =================
-
-    this.sound = "woof"; // override sound
-  }
-}
-
-export class Pitbull extends Dog {
-  constructor(init?: IAnimalProperties) {
-    super(init);
-    this.sound = "im just a dog"; // override sound
-  }
-}
-
-export class Cow extends Animal {
-  constructor(init?: IAnimalProperties) {
-    super(init);
-    this.sound = "mooo";
-  }
-}
-
-export class Goat extends Animal {
-  writeCode: () => void;
-
-  constructor(init?: IAnimalProperties & IGoatProperties) {
-    super(init);
-    this.sound = "you already did the goat?";
-    this.writeCode =
-      init?.writeCode ||
-      (() => {
-        console.log("you never helped me with confidence...");
-      });
-  }
-}
